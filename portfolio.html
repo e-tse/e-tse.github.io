@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Ethan Tse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="personal.html">Personal</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Portfolio</h1>
+        <p>Here is a cummulative summary of all the groups and projects I've worked on since the begining of undergrad.
+            This list is in reverse chronological order, and categorized by organization.  You can also
+            check out my recent resume <a target="_blank" rel="noopener noreferrer" href="Ethan Resume.pdf" > here</a>.
+        </p>
+
+<!-- DART -->
+        <details>
+            <summary>Georgia Tech - DART Lab</summary>
+            <p><strong>Title:</strong> Graduate Research Assistant AND Teaching Assistant</p>
+            <p><strong>Dates:</strong> Aug 2024 – Present</p>
+
+            <h3>Multimodal Robotics</h3>
+            <p>Designed a new unmanned ground vehicle that performs multimodal (wheeled and gliding) locomotion to surmount obstacles.</p>
+            <h3>Ground Robot and Arm Setup</h3>
+            <p>Designed a new unmanned ground vehicle that performs multimodal (wheeled and gliding) locomotion to surmount obstacles.</p>
+            <h3>ME 4451 TA</h3>
+            <h3>Miscellaneous Lab Tasks</h3>
+
+        </details>
+
+
+<!-- NASA -->
+        <details>
+            <summary>NASA</summary>
+            <p><strong>Title:</strong> Intern</p>
+            <p><strong>Dates:</strong> May 2023 – July 2022</p>
+
+            <h3>Lunar Surface Mobility Demo</h3>
+            <p class="spaced">At NASA, I worked on project focused on multiagent lunar surface mapping, navigation, and hazard avoidance.
+                The idea behind the project is, prior to sending astronauts back to the moon, we could send a team of robots that could map out
+                a potential landing site and perform basic construction and landing zone setup.
+                Below I've included a system overview, and then a few of the key contributions I personally made to the project.
+            </p>
+            <p>
+               You can also download the end of summer presentation my intern partner and I gave to our department
+                <a href="Summer 2023 Presentation final.pptx.pdf" target="_blank" rel="noopener noreferrer">here</a>.
+              </p>
+
+            <h4>System Overview</h4>
+            <img src="media/project-photo.jpg" alt="Project photo" style="max-width: 100%; border-radius: 8px;">
+
+            <h4>LiDAR SLAM Fix</h4>
+            <h4>Costmap Optimization</h4>
+            <h4>Simple Go To Pose Controller</h4>
+
+        </details>
+
+<!-- AREAL -->
+        <details>
+            <summary>Georgia Tech - AREAL lab</summary>
+            <p><strong>Title:</strong> Undergraduate Research Assistant</p>
+            <p><strong>Dates:</strong> August 2021 – May 2024</p>
+
+            <h3>Autonomous Quadrotor Landing on Moving Vehicle</h3>
+            <p class="spaced">The main project I worked on at AREAL focused on autonomously landing a multi-rotor vehicle on a moving ground vehicle.
+                As an undergraduate researcher, I was tasked with developing software and mechatronic
+                features that enable autonomous capabilities for multi-rotor vehicles.  </p>
+
+            <p class="spaced">My most significant contribution to this project was an infrared (IR) beacon localization package,
+                which implements a coded beacon system in ROS 2 based on the work outlined in the paper “CoBe -- Coded Beacons for Localization,
+                Object Tracking, and SLAM Augmentation” (Rabinovich et., 2017).  In short infrared beacons, which all look like
+                identical white blobs to a camera, can each be uniquely identified by flashing a binary ID number at a known baud rate,
+                where bright is a 1 and dim is a 0. These newly identified beacons can then be passed to OpenCV’s
+                Perspective-n-Point solver which in turn gives us our multi-rotor’s relative pose.</p>
+
+
+            <figure>
+                <video controls style="max-width: 100%; border-radius: 8px;" class="media">
+                <source src="media/behavior_tree_demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+                <figcaption>Simple behavior tree tech demo.  In this video, we used a behavior tree to dequeue waypoints from a list
+                    and send commands to PX4 which would fly the quadcopter to said waypoints.  After the list was empty, the behavior tree
+                    would automatically return the drone to home and land.
+                </figcaption>
+            </figure>
+
+            <p class="spaced">In addition to my localization package, I also setup a simple behavior tree test demo that would integrate the
+                BehaviorTree.CPP library with ROS 2 (which was not a feature at the time)
+                , and I designed a simple mechatronics board for the ground vehicle in Altium.</p>
+
+        </details>
+
+<!-- Siemens -->
+        <details>
+            <summary>Siemens</summary>
+            <p><strong>Title:</strong> Engineering Leadership Development Program (ELDP) Intern</p>
+            <p><strong>Dates:</strong> May 2022 – August 2022</p>
+            <h3>R&D Electronics - Solid State Circuit Breaker</h3>
+            <p>Worked on various software projects relating to the development of Siemen's Solid State Circuit Breaker (SSCB)</p>
+            <h4>Embedded Firmware</h4>
+            <h4>LabVIEW Tester</h4>
+        </details>
+
+
+    </main>
+
+    <footer>
+        &copy; 2025 Ethan Tse. All rights reserved.
+    </footer>
+</body>
+</html>
