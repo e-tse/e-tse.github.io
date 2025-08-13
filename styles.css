@@ -1,114 +1,125 @@
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: normal;
-}
-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #eaeaea;
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-}
-nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1.5rem;
-}
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-nav a:hover {
-    color: #0073e6;
-}
-main {
-    max-width: 900px;
-    margin: 1rem auto;
-    padding: 0 1rem;
-    text-align: left;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: normal;
 }
 
+/* --- HEADER / NAV --- */
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #0073e6;
+}
+
+/* --- MAIN LAYOUT --- */
+main {
+  max-width: 900px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+/* --- HEADINGS --- */
 h1 {
-    font-weight: 800;
-    font-size: 2.5rem;
-    margin-top: 1.5rem; /* space from header/nav */
-    margin-bottom: 0rem; /* space before the paragraph */
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 h2 {
-    font-weight: 800;
-    font-size: 1.5rem;
-    margin-top: 1.5rem; /* space from header/nav */
-    margin-bottom: 0rem; /* space before the paragraph */
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
+
 h3 {
-    font-weight: 800;
-    font-size: 1.25rem;
-    margin-top: 1.5rem; /* space from header/nav */
-    margin-bottom: 0rem; /* space before the paragraph */
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 h4 {
-    font-weight: normal;   /* removes bold */
-    font-style: italic;    /* italicizes text */
-    text-decoration: underline; /* underlines text */
-  }
+  font-weight: normal;
+  font-style: italic;
+  text-decoration: underline;
+}
 
+/* --- TEXT --- */
 p {
-    font-weight: 300;
-    font-size: 1.1rem;
-    margin-bottom: 0rem; /* more space after text before next section */
-    margin-top: 0rem;
-    line-height: 1.5;
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.5;
 }
 
 p.spaced {
-    margin-bottom: 1.5rem; /* or whatever spacing you want */
-  }
+  margin-bottom: 1.5rem;
+}
 
+/* --- FOOTER --- */
 footer {
-    margin-top: 3rem;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #777;
-    text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
 }
 
+/* --- PROFILE PIC --- */
 .profile-pic {
-    border-radius: 50%;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
 }
 
+/* --- RESUME BUTTON --- */
 .resume-button {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    background-color: #0073e6;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-    margin-top: 0rem;
-}
-.resume-button:hover {
-    background-color: #005bb5;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #0073e6;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
+.resume-button:hover {
+  background-color: #005bb5;
+}
+
+/* --- DROPDOWNS --- */
 details summary {
   cursor: pointer;
   font-weight: 600;
   font-size: 2rem;
   padding: 0.4rem 0;
   border-bottom: 1px solid #eaeaea;
-  list-style: none; /* hides default arrow */
+  list-style: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -124,7 +135,7 @@ details summary:hover {
 details summary::after {
   content: "▼";
   font-size: 0.9rem;
-  color: #000000;
+  color: #000;
 }
 
 details[open] summary::after {
@@ -139,29 +150,23 @@ summary {
 }
 
 summary::-webkit-details-marker {
-  display: none; /* optional: hide default arrow */
+  display: none;
 }
 
-summary::before {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-
+/* --- FIGURES --- */
 figure {
-  width: 600px;       /* fixed width matching .media */
-  max-width: 100%;    /* responsive */
-  margin: 0 auto 1rem auto; /* center horizontally and add bottom margin */
-  text-align: center; /* center caption text */
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto 1rem auto;
+  text-align: center;
 }
 
 .media {
-  width: 100%;        /* fill figure’s width */
+  width: 100%;
   height: auto;
   border-radius: 8px;
   display: block;
-  margin-bottom: 0.5rem;  /* space between media and caption */
-  margin-top: 1rem;
+  margin: 1rem 0 0.5rem 0;
 }
 
 figcaption {
@@ -169,44 +174,45 @@ figcaption {
   color: #555;
   font-style: italic;
   text-align: left;
-  /* no width needed, it will fill figure */
 }
 
+/* --- MEDIA ROWS --- */
 .media-row {
   display: flex;
-  justify-content: center;      /* center row in main content */
-  gap: 1rem;                    /* spacing between images */
-  flex-wrap: nowrap;             /* keep two images in one row */
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
   margin: 1rem 0;
 }
 
 .media-row figure {
-  flex: 1 1 auto;               /* allow figures to grow proportionally */
-  max-width: calc(50% - 0.5rem); /* ensures two figures fit in row with gap */
+  flex: 1 1 auto;
+  max-width: calc(50% - 0.5rem);
   margin: 0;
   text-align: center;
 }
 
 .media-row img,
 .media-row video {
-  height: 22rem;                /* same height for all media */
-  width: 100%;                  /* fill figure width */
-  object-fit: cover;            /* crop if needed to fill width/height */
+  height: 22rem;
+  width: 100%;
+  object-fit: cover;
   display: block;
   border-radius: 8px;
 }
 
+/* Tall media override */
 .media-row img.tall,
 .media-row video.tall {
-  height: auto;          /* allow full height */
-  max-height: 40rem;     /* optional: cap the tallest images */
-  width: auto;           /* maintain natural width */
-  max-width: 100%;       /* don’t overflow the row */
-  object-fit: contain;   /* fit inside container without cropping */
-  margin: 0 auto;        /* center it in figure */
-  display: block;
+  height: auto;
+  max-height: 40rem;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
+/* Captions in media rows */
 .media-row figcaption {
   font-size: 0.9rem;
   color: #555;
@@ -214,20 +220,34 @@ figcaption {
   text-align: center;
 }
 
-
+/* Small single media */
 .media-small {
-  width: 50%;          /* half the container */
-  max-width: 100%;     /* prevent overflow */
-  display: block;      /* allows margin auto centering */
-  margin: 0 auto;      /* center horizontally */
-  border-radius: 8px;  /* matches other media */
+  width: 50%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
 }
 
 .media-small + figcaption {
-  font-size: 0.8rem;   /* smaller caption */
+  font-size: 0.8rem;
   color: #555;
   margin-top: 0.3rem;
-  text-align: center;  /* center caption under image */
+  text-align: center;
 }
 
+/* --- MOBILE STYLES --- */
+@media (max-width: 768px) {
+  .media-row {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .media-row img,
+  .media-row video {
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+  }
+}
