@@ -21,7 +21,7 @@
         <h1>Portfolio</h1>
         <p>Here is a cummulative summary of all the groups and projects I've worked on since the begining of undergrad.
             This list is in reverse chronological order, and categorized by organization.  You can also
-            check out my recent resume <a target="_blank" rel="noopener noreferrer" href="Ethan Resume.pdf" > here</a>.
+            check out my recent resume <a target="_blank" rel="noopener noreferrer" href="media/Ethan Resume.pdf" > here</a>.
         </p>
 
 <!-- DART -->
@@ -31,9 +31,31 @@
             <p><strong>Dates:</strong> Aug 2024 – Present</p>
 
             <h3>Multimodal Robotics</h3>
+            <figure>
+                <video controls style="max-width: 100%; border-radius: 8px;" class="media">
+                <source src="media/gatech/multimodal.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+                <figcaption>Final demonstration of autonomous landing on a moving ground vehicle. The multi-rotor
+                    is able to determine it's location relative to the ground vehicle using infrared beacons. Video credit Ethan Tse - DART Lab.
+                </figcaption>
+            </figure>
             <p>Designed a new unmanned ground vehicle that performs multimodal (wheeled and gliding) locomotion to surmount obstacles.</p>
+            
+            
             <h3>Ground Robot and Arm Setup</h3>
+            <figure>
+                <video controls style="max-width: 100%; border-radius: 8px;" class="media">
+                <source src="media/gatech/arm_moving1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+                <figcaption>Final demonstration of autonomous landing on a moving ground vehicle. The multi-rotor
+                    is able to determine it's location relative to the ground vehicle using infrared beacons. Video credit Ethan Tse - DART Lab.
+                </figcaption>
+            </figure>
             <p>Designed a new unmanned ground vehicle that performs multimodal (wheeled and gliding) locomotion to surmount obstacles.</p>
+            
+            
             <h3>ME 4451 TA</h3>
             <h3>Miscellaneous Lab Tasks</h3>
 
@@ -54,11 +76,31 @@
             </p>
             <p>
                You can also download the end of summer presentation my intern partner and I gave to our department
-                <a href="Summer 2023 Presentation final.pptx.pdf" target="_blank" rel="noopener noreferrer">here</a>.
+                <a href="media/NASA/Summer 2023 Presentation final.pptx.pdf" target="_blank" rel="noopener noreferrer">here</a>.
               </p>
 
+              
             <h4>System Overview</h4>
-            <img src="media/project-photo.jpg" alt="Project photo" style="max-width: 100%; border-radius: 8px;">
+            <div class="media-row">
+                <figure>
+                    <img src="media/NASA/rovers.jpg" alt="rovers">
+                    <figcaption>Two Rover Robotics Rovers. Photo credit Ethan Tse and NASA.</figcaption>
+                </figure>
+                <figure>
+                    <img src="media/NASA/LRT.png" alt="LRT">
+                    <figcaption>Lunar Regolith Terrain. Photo credit Mike Zanetti and NASA</figcaption>
+                </figure>
+            </div>
+
+            <p>This project involved two Rover Robotics, 4WD Rover Pro’s.  One of these robots was equipped with an Ouster OS-1 LiDAR 
+                (Light Detection and Ranging) sensor, and the other with a Smart Video Guidance Sensor (SVGS) that can determine its local 
+                position and orientation (pose) relative to an LED target.  We designed this system to work on the Lunar Regolith Terrain, 
+                which is a 125 foot by 125 foot field of lunar regolith (moon soil) simulant.  The mission plan is to have the LiDAR rover 
+                explore an unknown landing sight, create a hazard map of obstacles and untraversable terrain, then have the SVGS rover perform 
+                basic construction tasks using this map.
+            </p>
+
+
 
             <h4>LiDAR SLAM Fix</h4>
             <h4>Costmap Optimization</h4>
@@ -77,6 +119,16 @@
                 As an undergraduate researcher, I was tasked with developing software and mechatronic
                 features that enable autonomous capabilities for multi-rotor vehicles.  </p>
 
+            <figure>
+                <video controls style="max-width: 100%; border-radius: 8px;" class="media">
+                <source src="media/gatech/landing_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+                <figcaption>Final demonstration of autonomous landing on a moving ground vehicle. The multi-rotor
+                    is able to determine it's location relative to the ground vehicle using infrared beacons. Video credit Adam Garlow - AREAL.
+                </figcaption>
+            </figure>
+
             <p class="spaced">My most significant contribution to this project was an infrared (IR) beacon localization package,
                 which implements a coded beacon system in ROS 2 based on the work outlined in the paper “CoBe -- Coded Beacons for Localization,
                 Object Tracking, and SLAM Augmentation” (Rabinovich et., 2017).  In short infrared beacons, which all look like
@@ -84,21 +136,22 @@
                 where bright is a 1 and dim is a 0. These newly identified beacons can then be passed to OpenCV’s
                 Perspective-n-Point solver which in turn gives us our multi-rotor’s relative pose.</p>
 
+            <p class="spaced">In addition to my localization package, I also setup a simple behavior tree test demo that would integrate the
+                BehaviorTree.CPP library with ROS 2 (which was not a feature at the time)
+                , and I designed a simple mechatronics board for the ground vehicle in Altium.</p>
 
             <figure>
                 <video controls style="max-width: 100%; border-radius: 8px;" class="media">
-                <source src="media/behavior_tree_demo.mp4" type="video/mp4">
+                <source src="media/gatech/behavior_tree_demo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video>
                 <figcaption>Simple behavior tree tech demo.  In this video, we used a behavior tree to dequeue waypoints from a list
                     and send commands to PX4 which would fly the quadcopter to said waypoints.  After the list was empty, the behavior tree
-                    would automatically return the drone to home and land.
+                    would automatically return the drone to home and land. Video credit Ethan Tse - AREAL.
                 </figcaption>
             </figure>
 
-            <p class="spaced">In addition to my localization package, I also setup a simple behavior tree test demo that would integrate the
-                BehaviorTree.CPP library with ROS 2 (which was not a feature at the time)
-                , and I designed a simple mechatronics board for the ground vehicle in Altium.</p>
+            
 
         </details>
 
@@ -109,6 +162,15 @@
             <p><strong>Dates:</strong> May 2022 – August 2022</p>
             <h3>R&D Electronics - Solid State Circuit Breaker</h3>
             <p>Worked on various software projects relating to the development of Siemen's Solid State Circuit Breaker (SSCB)</p>
+
+            <figure>
+                <img src="media/siemens/Tester.jpg" alt="Ethan Testing the Device" class="media media-small">
+                <figcaption>
+                    I can't show any of the hardware since it's propreitary, so here's a picture of me crammed in behind our big circuit breaker tester.
+                    Photo credit Ethan Tse - Siemens.
+                </figcaption>
+            </figure>
+
             <h4>Embedded Firmware</h4>
             <h4>LabVIEW Tester</h4>
         </details>
