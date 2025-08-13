@@ -19,7 +19,7 @@
 
     <main>
         <h1>Portfolio</h1>
-        <p>Here is a cummulative summary of all the groups and projects I've worked on since the begining of undergrad.
+        <p class="spaced">Here is a cummulative summary of all the major groups and projects I've worked on since the begining of undergrad.
             This list is in reverse chronological order, and categorized by organization.  You can also
             check out my recent resume <a target="_blank" rel="noopener noreferrer" href="media/Ethan Resume.pdf" > here</a>.
         </p>
@@ -37,7 +37,7 @@
                 Your browser does not support the video tag.
                 </video>
                 <figcaption>Final demonstration of autonomous landing on a moving ground vehicle. The multi-rotor
-                    is able to determine it's location relative to the ground vehicle using infrared beacons. Video credit Ethan Tse - DART Lab.
+                    is able to determine it's location relative to the ground vehicle using infrared beacons. Video credit Ethan Tse and DART Lab.
                 </figcaption>
             </figure>
             <p>Designed a new unmanned ground vehicle that performs multimodal (wheeled and gliding) locomotion to surmount obstacles.</p>
@@ -50,13 +50,13 @@
                 Your browser does not support the video tag.
                 </video>
                 <figcaption>Final demonstration of autonomous landing on a moving ground vehicle. The multi-rotor
-                    is able to determine it's location relative to the ground vehicle using infrared beacons. Video credit Ethan Tse - DART Lab.
+                    is able to determine it's location relative to the ground vehicle using infrared beacons. Video credit Ethan Tse and DART Lab.
                 </figcaption>
             </figure>
             <p>Designed a new unmanned ground vehicle that performs multimodal (wheeled and gliding) locomotion to surmount obstacles.</p>
             
             
-            <h3>ME 4451 TA</h3>
+            <h3>ME 4451 Head TA</h3>
             <h3>Miscellaneous Lab Tasks</h3>
 
         </details>
@@ -71,11 +71,12 @@
             <h3>Lunar Surface Mobility Demo</h3>
             <p class="spaced">At NASA, I worked on project focused on multiagent lunar surface mapping, navigation, and hazard avoidance.
                 The idea behind the project is, prior to sending astronauts back to the moon, we could send a team of robots that could map out
-                a potential landing site and perform basic construction and landing zone setup.
+                a potential landing site and perform basic construction and landing zone setup. 
                 Below I've included a system overview, and then a few of the key contributions I personally made to the project.
             </p>
             <p>
-               You can also download the end of summer presentation my intern partner and I gave to our department
+                I collaborated on this project with my fellow intern Mukund Krishnakumar.  
+                You can download our end of summer presentation
                 <a href="media/NASA/Summer 2023 Presentation final.pptx.pdf" target="_blank" rel="noopener noreferrer">here</a>.
               </p>
 
@@ -125,7 +126,7 @@
                 Your browser does not support the video tag.
                 </video>
                 <figcaption>Final demonstration of autonomous landing on a moving ground vehicle. The multi-rotor
-                    is able to determine it's location relative to the ground vehicle using infrared beacons. Video credit Adam Garlow - AREAL.
+                    is able to determine it's location relative to the ground vehicle using infrared beacons. Video credit Adam Garlow and AREAL.
                 </figcaption>
             </figure>
 
@@ -137,8 +138,8 @@
                 Perspective-n-Point solver which in turn gives us our multi-rotor’s relative pose.</p>
 
             <p class="spaced">In addition to my localization package, I also setup a simple behavior tree test demo that would integrate the
-                BehaviorTree.CPP library with ROS 2 (which was not a feature at the time)
-                , and I designed a simple mechatronics board for the ground vehicle in Altium.</p>
+                BehaviorTree.CPP library with ROS 2 (which was not a feature at the time), and I designed a simple 
+                mechatronics printed circuit board for the ground vehicle in Altium.</p>
 
             <figure>
                 <video controls style="max-width: 100%; border-radius: 8px;" class="media">
@@ -147,7 +148,7 @@
                 </video>
                 <figcaption>Simple behavior tree tech demo.  In this video, we used a behavior tree to dequeue waypoints from a list
                     and send commands to PX4 which would fly the quadcopter to said waypoints.  After the list was empty, the behavior tree
-                    would automatically return the drone to home and land. Video credit Ethan Tse - AREAL.
+                    would automatically return the drone to home and land. Video credit Ethan Tse and AREAL.
                 </figcaption>
             </figure>
 
@@ -161,18 +162,30 @@
             <p><strong>Title:</strong> Engineering Leadership Development Program (ELDP) Intern</p>
             <p><strong>Dates:</strong> May 2022 – August 2022</p>
             <h3>R&D Electronics - Solid State Circuit Breaker</h3>
-            <p>Worked on various software projects relating to the development of Siemen's Solid State Circuit Breaker (SSCB)</p>
+            <p class="spaced">I spent my summer at Siemens assisting on various tasks on their new Solid State Circuit Breaker (SSCB). 
+                Compared to traditional circuit breakers which use an electromechanic switch, a SSCB uses MOSFETs to trip significantly 
+                faster than their electromechanical counterparts during a fault. In addition, these breakers utilize an STM32 microcontroller 
+                which allows for more advanced fault detection techniques.</p>
 
             <figure>
                 <img src="media/siemens/Tester.jpg" alt="Ethan Testing the Device" class="media media-small">
                 <figcaption>
                     I can't show any of the hardware since it's propreitary, so here's a picture of me crammed in behind our big circuit breaker tester.
-                    Photo credit Ethan Tse - Siemens.
+                    Photo credit Ethan Tse.
                 </figcaption>
             </figure>
 
             <h4>Embedded Firmware</h4>
+                <p>My primary responsibility was writing embedded C code for the SSCB. One of my tasks was to have the circuit breaker store current and 
+                    voltage measurements over a fixed period of time, and then send that information via Bluetooth Low Energy (BLE) to a 
+                    phone app. Another one of my tasks was to implement a “linear thermal memory” feature on the breaker. Essentially, 
+                    the breaker would store its last trip time in an RTC (Real Time Clock), and on reboot, would modify its subsequent 
+                    trip time based on how recently it had previously tripped.</p>
             <h4>LabVIEW Tester</h4>
+                <p>My secondary task for the summer was to automate our I2t (current squared over time) tester, which essentially measures the 
+                    trip time of a breaker for a given amount of current.  Using LabVIEW, I wrote a program that would automatically command our 
+                    tester via serial commands, record the trip time of the breaker, then re-set the breaker using a linear actuator.  
+                    I then designed a graphical user interface for these tests.</p>
         </details>
 
 

@@ -172,31 +172,48 @@ figcaption {
   /* no width needed, it will fill figure */
 }
 
-
 .media-row {
   display: flex;
-  gap: 1rem;
-  margin: 1rem;
+  justify-content: center;      /* center row in main content */
+  gap: 1rem;                    /* spacing between images */
+  flex-wrap: nowrap;             /* keep two images in one row */
+  margin: 1rem 0;
 }
 
 .media-row figure {
-  width: 50%;       /* each media takes half the row */
+  flex: 1 1 auto;               /* allow figures to grow proportionally */
+  max-width: calc(50% - 0.5rem); /* ensures two figures fit in row with gap */
   margin: 0;
   text-align: center;
 }
 
-.media-row video,
-.media-row img {
-  width: 100%;      /* fill the figure width */
+.media-row img,
+.media-row video {
+  height: 22rem;                /* same height for all media */
+  width: 100%;                  /* fill figure width */
+  object-fit: cover;            /* crop if needed to fill width/height */
+  display: block;
   border-radius: 8px;
+}
+
+.media-row img.tall,
+.media-row video.tall {
+  height: auto;          /* allow full height */
+  max-height: 40rem;     /* optional: cap the tallest images */
+  width: auto;           /* maintain natural width */
+  max-width: 100%;       /* don’t overflow the row */
+  object-fit: contain;   /* fit inside container without cropping */
+  margin: 0 auto;        /* center it in figure */
+  display: block;
 }
 
 .media-row figcaption {
   font-size: 0.9rem;
   color: #555;
-  margin-top: 0.5rem
-
+  margin-top: 0.3rem;
+  text-align: center;
 }
+
 
 .media-small {
   width: 50%;          /* half the container */
@@ -212,3 +229,5 @@ figcaption {
   margin-top: 0.3rem;
   text-align: center;  /* center caption under image */
 }
+
+
