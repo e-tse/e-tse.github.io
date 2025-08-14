@@ -175,11 +175,11 @@ figcaption {
   font-style: italic;
   text-align: left;
 }
-
 /* --- MEDIA ROWS --- */
 .media-row {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 1rem;
   flex-wrap: nowrap;
   margin: 1rem 0;
@@ -197,8 +197,8 @@ figcaption {
   height: 22rem;
   width: 100%;
   object-fit: cover;
-  display: block;
   border-radius: 8px;
+  display: block;
 }
 
 /* Tall media override */
@@ -236,18 +236,22 @@ figcaption {
   text-align: center;
 }
 
-/* --- MOBILE STYLES --- */
-@media (max-width: 768px) {
+/* Mobile/tablet stacked layout */
+@media (max-width: 1024px) {
   .media-row {
-    flex-direction: column;
-    align-items: center;
+    display: block; /* stop flexbox */
+  }
+
+  .media-row figure {
+    max-width: 100%;
+    margin-bottom: 1rem;
   }
 
   .media-row img,
   .media-row video {
-    height: auto !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
   }
 }
