@@ -35,36 +35,56 @@
             <p><strong>Dates:</strong> Aug 2024 – Present</p>
 
             <h3>Multimodal Robotics</h3>
+
+            <p>One of the projects I worked on was the design of a multimodal unmanned ground vehicle (UGV). Ground
+                vehicles (specifically wheeled vehicles) are energy efficient forms of transportation, but struggle to
+                overcome certain obstacles. Airial vehicles have the exact opposite problem, highly mobile but much less
+                efficient. The idea behind this project is to create a UGV with multimodal locomotion that can jump over
+                certain obstacles.</p>
             <figure>
                 <video controls style="max-width: 100%; border-radius: 8px;" class="media">
                     <source src="media/gatech/multimodal.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <figcaption>Final demonstration of autonomous landing on a moving ground vehicle. The multi-rotor
-                    is able to determine it's location relative to the ground vehicle using infrared beacons. Video
+                <figcaption>Minimum viable product demonstration of multimodal locomation of a unmannded ground vehicle.
+                    Video
                     credit Ethan Tse and DART Lab.
                 </figcaption>
             </figure>
-            <p>Designed a new unmanned ground vehicle that performs multimodal (wheeled and gliding) locomotion to
-                surmount obstacles.</p>
+            <p>My role in this project was to spin up our initial minimum viable product for other to build off of in
+                the future. I did so by modifying a high-speed RC truck by affixing a custom foam wing with lightweight
+                3D printed mounts. These wings followed a NACA 6412 profile, which was recommended by a few of my
+                aerospace engineering lab mates, and constructed from scratch out of laser cut ribs and foam board.
+            </p>
 
 
             <h3>Ground Robot and Arm Setup</h3>
+
             <figure>
                 <video controls style="max-width: 100%; border-radius: 8px;" class="media">
                     <source src="media/gatech/arm_moving1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <figcaption>Final demonstration of autonomous landing on a moving ground vehicle. The multi-rotor
-                    is able to determine it's location relative to the ground vehicle using infrared beacons. Video
+                <figcaption>ROS 2 MoveIt demonstration for UR5e arm that is mounted to Husarion Panther UGV. Video
                     credit Ethan Tse and DART Lab.
                 </figcaption>
             </figure>
-            <p>Designed a new unmanned ground vehicle that performs multimodal (wheeled and gliding) locomotion to
-                surmount obstacles.</p>
+            <p>I was also tasked with revitalizing an old UGV we had in lab by attaching a robotic arm to it in order to
+                prepare it for future robotic teaming projects. The UGV platform I worked with was a Husarion Panther,
+                and the robotic arm was a Universal Robots UR5e. At the time, we didn’t actually own the UR5e, so I was
+                in charge of the ~$40,000 transaction between Georgia Tech and Advanced Control Solutions, the local UR
+                arm vendor. Simultaneously, I designed and fabricated an aluminum mount for the arm, primarily out of
+                80/20 extrusion and waterjet stock. Finally, once the arm arrived and everything was mounted, I setup a
+                Nvidia Jetson to control the arm with ROS 2 MoveIt.</p>
 
 
             <h3>ME 4451 - Head Teaching Assistant</h3>
+
+            <p>I was the head TA for Tech’s ME 4451 Robotics class for both the Spring 2025 and Fall 2025 semester. I
+                worked with Dr. Anirban Mazumdar (who is also the PI of DART Lab) and the rest of the teaching team to
+                support 120+ students over these two semesters. In addition to various administrative tasks, I also
+                refined and led weekly labs which provided students an overview of robotic arms, computer vision, and
+                mobile robotic</p>
 
 
         </details>
@@ -119,9 +139,15 @@
             </p>
 
             <figure>
-                <img src="media/NASA/ROS Overview.PNG" alt="ROS 2 overview" class="media" style="border: 1px solid #000000;">
-                <figcaption>An overview of the ROS 2 architecture we proposed to acomplish our mission.  Credit Ethan Tse, Mukund Krishnakumar, and NASA.</figcaption>
+                <img src="media/NASA/ROS Overview.PNG" alt="ROS 2 overview" class="media"
+                    style="border: 1px solid #000000;">
+                <figcaption>An overview of the ROS 2 architecture we proposed to acomplish our mission. Credit Ethan
+                    Tse, Mukund Krishnakumar, and NASA.</figcaption>
             </figure>
+
+            <p>This project was in a relatively early stage in it’s development, which means that we had the opportunity
+                to pitch our own overarching ROS 2 architecture for the mission plan. Above is an image of our proposed
+                architecture setup.</p>
 
 
 
@@ -129,17 +155,18 @@
             <div class="media-row">
                 <figure>
                     <img src="media/NASA/broken1.png" alt="broken lidar 1">
-                    <figcaption>SLAM map with minor localization errors.  Credit Ethan Tse and NASA.</figcaption>
+                    <figcaption>SLAM map with minor localization errors. Credit Ethan Tse and NASA.</figcaption>
                 </figure>
                 <figure>
                     <img src="media/NASA/broken2.jpg" alt="broken lidar 2">
-                    <figcaption>Fully broken SLAM map with massive localization errors.  Credit Ethan Tse and NASA.</figcaption>
+                    <figcaption>Fully broken SLAM map with massive localization errors. Credit Ethan Tse and NASA.
+                    </figcaption>
                 </figure>
             </div>
 
             <figure>
                 <img src="media/NASA/clean1.png" alt="ROS 2 overview" class="media">
-                <figcaption>Complete SLAM map of the LRT field.  Credit Ethan Tse and NASA.</figcaption>
+                <figcaption>Complete SLAM map of the LRT field. Credit Ethan Tse and NASA.</figcaption>
             </figure>
 
             <h4>Costmap Optimization</h4>
@@ -150,7 +177,7 @@
                 </figure>
                 <figure>
                     <img src="media/NASA/unit normals.png" alt="broken lidar 2">
-                    <figcaption>b) 3D hazard map with hazards identifed in red based on unit normals calculated with the 
+                    <figcaption>b) 3D hazard map with hazards identifed in red based on unit normals calculated with the
                         Point Cloud Library. Credit Vetri Vijay and NASA.</figcaption>
                 </figure>
             </div>
@@ -175,7 +202,8 @@
                     <source src="media/NASA/go_to_pose.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <figcaption>Demonstration of go-to-pose (position and orientation) controller.  Credit Ethan Tse and NASA.
+                <figcaption>Demonstration of go-to-pose (position and orientation) controller. Credit Ethan Tse and
+                    NASA.
                 </figcaption>
             </figure>
 
@@ -185,7 +213,8 @@
                     <source src="media/NASA/follow_the_leader.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <figcaption>Follow the leader demonstration. In this example, the SVGS rover is utilizing a modified version of the go-to-pose controller.
+                <figcaption>Follow the leader demonstration. In this example, the SVGS rover is utilizing a modified
+                    version of the go-to-pose controller.
                     credit Ethan Tse and NASA.
                 </figcaption>
             </figure>
